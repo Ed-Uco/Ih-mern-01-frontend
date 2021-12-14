@@ -1,18 +1,18 @@
 // ./client/src/components/Guitars/index.js
 import React, { useEffect, useContext } from 'react';
-import GuitarContext from './../../context/Guitar/GuitarContext';
+import StoreContext from './../../context/Store/StoreContext';
 
-export default function Guitars() {
+export default function Stores() {
     // ESTADO GLOBAL
-    const ctx = useContext(GuitarContext);
+    const ctx = useContext(StoreContext);
 
-    const { guitars, hola, changeText } = ctx;
+    const { stores, hola, changeText } = ctx;
 
     // ESTADO LOCAL
 
     return (
         <>
-            <p>Listado de guitarras</p>
+            <p>Listado de stores</p>
             <p>{hola}</p>
 
             <button
@@ -20,7 +20,7 @@ export default function Guitars() {
                     changeText();
                 }}
             >
-                Cambiar texto
+                Cambiar texto de store
             </button>
         </>
     );
